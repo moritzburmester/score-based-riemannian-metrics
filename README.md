@@ -28,72 +28,89 @@ conda create --name score-metrics --file requirements.txt
 ## Example Geodesics
 
 ### URC (Uniform Rotated Characters)
-
 <table>
   <tr>
-    <td align="right" width="120"><b>LERP</b></td>
-    <td><img src="assets/LERP_g18.png" width="850"></td>
+    <td align="right" width="120"><b>ideal (γ*)</b></td>
+    <td><img src="assets/urc_plots/geodesic_interpolations/gamma_star_ex0.png" width="850"></td>
+  </tr>
+  <tr>
+    <td align="right"><b>LERP</b></td>
+    <td><img src="assets/urc_plots/geodesic_interpolations/raw_lerp_ex0.png" width="850"></td>
   </tr>
   <tr>
     <td align="right"><b>SLERP</b></td>
-    <td><img src="assets/SLERP_g18.png" width="850"></td>
+    <td><img src="assets/urc_plots/geodesic_interpolations/raw_slerp_ex0.png" width="850"></td>
   </tr>
   <tr>
-    <td align="right"><b>λ = 0</b></td>
-    <td><img src="assets/lam0_g18.png" width="850"></td>
+    <td align="right"><b>diffusion λ = 0 (SAI)</b></td>
+    <td><img src="assets/urc_plots/geodesic_interpolations/diff_lam0_ex0.png" width="850"></td>
   </tr>
   <tr>
-    <td align="right"><b>λ = 0.1</b></td>
-    <td><img src="assets/lam0.1_g18.png" width="850"></td>
+    <td align="right"><b>diffusion λ = 0.1</b></td>
+    <td><img src="assets/urc_plots/geodesic_interpolations/diff_lam01_ex0.png" width="850"></td>
   </tr>
   <tr>
-    <td align="right"><b>λ = 1</b></td>
-    <td><img src="assets/lam1_g18.png" width="850"></td>
+    <td align="right"><b>diffusion λ = 0.25</b></td>
+    <td><img src="assets/urc_plots/geodesic_interpolations/diff_lam025_ex0.png" width="850"></td>
+  </tr>
+  <tr>
+    <td align="right"><b>diffusion λ = 0.5</b></td>
+    <td><img src="assets/urc_plots/geodesic_interpolations/diff_lam05_ex0.png" width="850"></td>
+  </tr>
+  <tr>
+    <td align="right"><b>diffusion λ = 0.75</b></td>
+    <td><img src="assets/urc_plots/geodesic_interpolations/diff_lam075_ex0.png" width="850"></td>
+  </tr>
+  <tr>
+    <td align="right"><b>diffusion λ = 1</b></td>
+    <td><img src="assets/urc_plots/geodesic_interpolations/diff_lam1_ex0.png" width="850"></td>
+  </tr>
+  <tr>
+    <td align="right"><b>EBM energy (E<sub>θ</sub>)</b></td>
+    <td><img src="assets/urc_plots/geodesic_interpolations/Etheta_ex0.png" width="850"></td>
   </tr>
   <tr>
     <td align="right"><b>LAND</b></td>
-    <td><img src="assets/LAND_g18.png" width="850"></td>
+    <td><img src="assets/urc_plots/geodesic_interpolations/LAND_ex0.png" width="850"></td>
   </tr>
   <tr>
     <td align="right"><b>RBF</b></td>
-    <td><img src="assets/RBF_g18.png" width="850"></td>
+    <td><img src="assets/urc_plots/geodesic_interpolations/RBF_ex0.png" width="850"></td>
   </tr>
 </table>
 
-### MorphBench (M) in Stable Diffusion v2.1-base 
-
+### MorphBench (M) in Stable Diffusion v2.1-base — Dog → Cat
 <table>
   <tr>
     <td align="right" width="120"><b>LERP</b></td>
-    <td><img src="assets/mbm_wolf_tiger_lerp_strip.png" width="850"></td>
+    <td><img src="assets/mb(m)_plots/geodesic_interpolations/mbm_realdog_cat_lerp_strip.png" width="850"></td>
   </tr>
   <tr>
     <td align="right"><b>SLERP</b></td>
-    <td><img src="assets/mbm_wolf_tiger_slerp_strip.png" width="850"></td>
+    <td><img src="assets/mb(m)_plots/geodesic_interpolations/mbm_realdog_cat_slerp_strip.png" width="850"></td>
   </tr>
   <tr>
     <td align="right"><b>λ = 0</b></td>
-    <td><img src="assets/mbm_wolf_tiger_lam00_it500_strip.png" width="850"></td>
+    <td><img src="assets/mb(m)_plots/geodesic_interpolations/mbm_realdog_cat_lam00_it500_strip.png" width="850"></td>
   </tr>
   <tr>
     <td align="right"><b>λ = 0.1</b></td>
-    <td><img src="assets/mbm_wolf_tiger_lam01_it500_strip.png" width="850"></td>
+    <td><img src="assets/mb(m)_plots/geodesic_interpolations/mbm_realdog_cat_lam01_it500_strip.png" width="850"></td>
   </tr>
   <tr>
     <td align="right"><b>λ = 0.25</b></td>
-    <td><img src="assets/mbm_wolf_tiger_lam025_it500_strip.png" width="850"></td>
+    <td><img src="assets/mb(m)_plots/geodesic_interpolations/mbm_realdog_cat_lam025_it500_strip.png" width="850"></td>
   </tr>
   <tr>
     <td align="right"><b>λ = 0.5</b></td>
-    <td><img src="assets/mbm_wolf_tiger_lam05_it500_strip.png" width="850"></td>
+    <td><img src="assets/mb(m)_plots/geodesic_interpolations/mbm_realdog_cat_lam05_it500_strip.png" width="850"></td>
   </tr>
   <tr>
     <td align="right"><b>λ = 0.75</b></td>
-    <td><img src="assets/mbm_wolf_tiger_lam075_it500_strip.png" width="850"></td>
+    <td><img src="assets/mb(m)_plots/geodesic_interpolations/mbm_realdog_cat_lam075_it500_strip.png" width="850"></td>
   </tr>
   <tr>
     <td align="right"><b>λ = 1</b></td>
-    <td><img src="assets/mbm_wolf_tiger_lam10_it500_strip.png" width="850"></td>
+    <td><img src="assets/mb(m)_plots/geodesic_interpolations/mbm_realdog_cat_lam10_it500_strip.png" width="850"></td>
   </tr>
 </table>
-
