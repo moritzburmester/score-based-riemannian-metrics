@@ -27,7 +27,7 @@ conda create --name score-metrics --file requirements.txt
 ```
 ## Example Geodesics
 
-### URC (Uniform Rotated Characters)
+### URC (Uniformly Rotated Characters)
 <table>
   <tr>
     <td align="right" width="120"><b>ideal (γ*)</b></td>
