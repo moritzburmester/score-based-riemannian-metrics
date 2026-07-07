@@ -10,7 +10,7 @@ Checkpoints for each model and geodesics saved as .pt files can be found in the 
 
 ## Repository Structure 
 ```
-├── assets 
+├── assets # contains images from the thesis as well as additional results, such as interpolations and other plots
 ├── diffusion_model_dependencies/   # scripts and modules to train, evaluate, and sample from score-based  models
 ├── experiments_toy_datasets/       # geodesics under different metrics for the toy datasets (circle, s-curve, swiss-roll/spiral, ucg, wcg, two moons)
 ├── experiments_urc/                # geodesics on the uniform rotated characters (URC) dataset
