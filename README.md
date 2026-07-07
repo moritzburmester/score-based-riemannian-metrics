@@ -13,8 +13,8 @@ Checkpoints for each model and geodesics saved as .pt files can be found in the 
 ├── assets # contains images from the thesis as well as additional results, such as interpolations and other plots
 ├── diffusion_model_dependencies/   # scripts and modules to train, evaluate, and sample from score-based  models
 ├── experiments_toy_datasets/       # geodesics under different metrics for the toy datasets (circle, s-curve, swiss-roll/spiral, ucg, wcg, two moons)
-├── experiments_urc/                # geodesics on the uniform rotated characters (URC) dataset
-├── experiments_mbm/         # geodesics in the stable  latent space
+├── experiments_urc/                # geodesics on the uniform rotated characters (URC) dataset the latent space of an RAE
+├── experiments_mbm/         # geodesics in the stable diffusion v2.1-base latent space
 ├── tutorial.ipynb                  # notebook to optimize geodesics under different Riemannian metrics on the toy datasets
 ├── requirements.txt
 └── README.md
