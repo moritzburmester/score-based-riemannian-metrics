@@ -114,3 +114,8 @@ conda create --name score-metrics --file requirements.txt
     <td><img src="assets/mb(m)_plots/geodesic_interpolations/mbm_realdog_cat_lam10_it500_strip.png" width="850"></td>
   </tr>
 </table>
+
+## Code Sources
+We use previously written implementations of key papers referenced in the thesis, as well as standard frameworks for Riemannian metrics and score-based diffusion models. Code is referenced per comments whenever it is adapted from other sources, but we list the repositories here for completeness.
+For the toy data and URC experiments, we use Stochman: https://github.com/MachineLearningLifeScience/stochman and https://github.com/VictorBoutin/RiemannEBM. The graph-based initialization strategy is adapted from https://github.com/georgiosarvanitidis/geometric_ml/blob/master/python/core/geodesics.py#L647. For the Stable Diffusion experiments, we follow https://github.com/TerrysLearning/GeodesicDiffusion/. For the score-based models, we use https://github.com/yang-song/score_sde_pytorch?tab=readme-ov-file and https://github.com/GBATZOLIS/ID-diff/tree/main. 
+
