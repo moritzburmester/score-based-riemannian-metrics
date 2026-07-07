@@ -1,5 +1,5 @@
-# Riemannian Metrics from Score-based Diffusion Models 
-GitHub repository for my Master Thesis on Riemannian Metrics from Score-based Diffusion Models
+# Riemannian Metrics from Score-based  Models 
+GitHub repository for my Master Thesis on Riemannian Metrics from Score-based  Models
 
 
 ## Overview 
@@ -11,10 +11,10 @@ Checkpoints for each model and geodesics saved as .pt files can be found in the 
 ## Repository Structure 
 ```
 ├── assets 
-├── diffusion_model_dependencies/   # scripts and modules to train, evaluate, and sample from score-based diffusion models
+├── _model_dependencies/   # scripts and modules to train, evaluate, and sample from score-based  models
 ├── experiments_toy_datasets/       # geodesics under different metrics for the toy datasets (circle, s-curve, swiss-roll/spiral, ucg, wcg, two moons)
 ├── experiments_urc/                # geodesics on the uniform rotated characters (URC) dataset
-├── experiments_mbm/         # geodesics in the stable diffusion latent space
+├── experiments_mbm/         # geodesics in the stable  latent space
 ├── tutorial.ipynb                  # notebook to optimize geodesics under different Riemannian metrics on the toy datasets
 ├── requirements.txt
 └── README.md
@@ -42,27 +42,27 @@ conda create --name score-metrics --file requirements.txt
     <td><img src="assets/urc_plots/geodesic_interpolations/raw_slerp_ex0.png" width="850"></td>
   </tr>
   <tr>
-    <td align="right"><b>diffusion λ = 0 (SAI)</b></td>
+    <td align="right"><b> λ = 0 (SAI)</b></td>
     <td><img src="assets/urc_plots/geodesic_interpolations/diff_lam0_ex0.png" width="850"></td>
   </tr>
   <tr>
-    <td align="right"><b>diffusion λ = 0.1</b></td>
+    <td align="right"><b> λ = 0.1</b></td>
     <td><img src="assets/urc_plots/geodesic_interpolations/diff_lam01_ex0.png" width="850"></td>
   </tr>
   <tr>
-    <td align="right"><b>diffusion λ = 0.25</b></td>
+    <td align="right"><b> λ = 0.25</b></td>
     <td><img src="assets/urc_plots/geodesic_interpolations/diff_lam025_ex0.png" width="850"></td>
   </tr>
   <tr>
-    <td align="right"><b>diffusion λ = 0.5</b></td>
+    <td align="right"><b> λ = 0.5</b></td>
     <td><img src="assets/urc_plots/geodesic_interpolations/diff_lam05_ex0.png" width="850"></td>
   </tr>
   <tr>
-    <td align="right"><b>diffusion λ = 0.75</b></td>
+    <td align="right"><b> λ = 0.75</b></td>
     <td><img src="assets/urc_plots/geodesic_interpolations/diff_lam075_ex0.png" width="850"></td>
   </tr>
   <tr>
-    <td align="right"><b>diffusion λ = 1</b></td>
+    <td align="right"><b> λ = 1</b></td>
     <td><img src="assets/urc_plots/geodesic_interpolations/diff_lam1_ex0.png" width="850"></td>
   </tr>
   <tr>
@@ -79,7 +79,7 @@ conda create --name score-metrics --file requirements.txt
   </tr>
 </table>
 
-### MorphBench (M) in Stable Diffusion v2.1-base — Dog → Cat
+### MorphBench (M) in Stable  v2.1-base — Dog → Cat
 <table>
   <tr>
     <td align="right" width="120"><b>LERP</b></td>
