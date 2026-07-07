@@ -63,3 +63,56 @@ def _PER(points, deriv):
     denom = (1.0 + s_norm2).unsqueeze(-1).unsqueeze(-1)
     N, D = points.shape
     return _eye(N, D, points.device, points.dtype) - sst / denom
+
+def _build(metric_fn, name, deriv, reference_points,
+           target_min, target_max, summary='trace',
+           log_scale=False, normalize=True, **hparams):
+
+    raw = lambda x: metric_fn(x, deriv, **hparams)
+
+    if normalize:
+        normalized, stats = normalize_metric(raw, reference_points,
+                                             target_min=target_min,
+                                             target_max=target_max,
+                                             summary=summary, log_scale=log_scale)
+        return BaseManifold(normalized, name=name), {'kind': name, **hparams, **stats}
+
+    with torch.no_grad():
+        G = raw(reference_points)
+        summary_fn = _summaries[summary] if isinstance(summary, str) else summary
+        s = summary_fn(G).clamp(min=1e-30)
+        stats = {
+            'kind': name, **hparams,
+            'normalized': False,
+            'summary': summary,
+            'scale_min_orig': float(s.min()),
+            'scale_max_orig': float(s.max()),
+        }
+    return BaseManifold(raw, name=name), stats
+
+def build_SAI(deriv, reference_points, *, tau=0,
+              target_min=1.0, target_max=1000.0, normalize=False):
+    return _build(_SAI, 'SAI', deriv, reference_points, target_min, target_max,
+                  summary='trace', normalize=normalize, tau=tau)
+
+def build_PER(deriv, reference_points, *,
+              target_min=1.0, target_max=1000.0, normalize=False):
+    return _build(_PER, 'PER', deriv, reference_points, target_min, target_max,
+                  summary='trace', normalize=normalize)
+
+def build_AZE(deriv, reference_points, *, lam=1.0,
+              target_min=1.0, target_max=1000.0, normalize=False):
+    return _build(_AZE, 'AZE', deriv, reference_points, target_min, target_max,
+                  summary='trace', normalize=normalize, lam=lam)
+
+def build_G(deriv, reference_points, *,
+             target_min=1.0, target_max=1000.0, normalize=False):
+    return _build(_G, 'G', deriv, reference_points, target_min, target_max,
+                  summary='trace', normalize=normalize)
+
+def build_INVP(deriv, reference_points, *,
+             target_min=1.0, target_max=1000.0, normalize=True):
+    return _build(_INVP, 'INVP', deriv, reference_points, target_min, target_max,
+                  summary='trace', normalize=normalize)
+
+_summaries = {'trace': _trace_summary, 'det': _det_summary}

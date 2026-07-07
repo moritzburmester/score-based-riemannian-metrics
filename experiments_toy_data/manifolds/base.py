@@ -81,3 +81,4 @@ def normalize_metric(metric_fn, reference_points,
         'log_scale': log_scale,
     }
 
+_summaries = {'trace': _trace_summary, 'det': _det_summary}
