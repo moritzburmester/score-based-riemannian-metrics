@@ -3,7 +3,7 @@ GitHub repository for my Master Thesis on Riemannian Metrics from Score-based  M
 
 
 ## Overview 
-This repository contains the code necessary to reproduce the experiments from my thesis. Specifically, I investigated the behavior of different Riemannian metrics from literature, as well as proposed a new metric that interpolates between manifold-aware and density-aware terms. The manifold-aware term is composed of the Jacobian of the score function, where as the density-aware term is the magnitude of the score function. The Jacobian term guides geodesics to move tangentially to the underlying data manifold, where as the magnitude term ideally pulls the geodesic towards higher density regions.
+This repository contains the code necessary to reproduce the experiments from my thesis. Specifically, I investigated the behavior of different score-based Riemannian metrics from literature, as well as proposed a new metric that interpolates between a directional (anisotropic) Riemannian metric and conformal (isotropic), density-aware term. The directional term is composed of the Jacobian of the score function, where as the density-aware term is the magnitude of the score function. The Jacobian term guides geodesics to move tangentially with respect to the underlying data manifold, where as the magnitude term ideally pulls the geodesic towards higher density regions. 
 
 ## Checkpoints and Geodesics
 Checkpoints for each model and geodesics saved as .pt files can be found in the respective experiment folders. 
