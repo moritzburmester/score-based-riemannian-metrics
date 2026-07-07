@@ -23,6 +23,7 @@ README.md
 ```bash
 git clone https://github.com/moritzburmester/riem-score-metrics.git
 cd score-based-riemannian-metrics
+# installing every library isn't necessary for the toy experiments, but experiments in stable diffusion require specific versions of torch etc.
 conda create --name score-metrics --file requirements.txt
 ```
 ## Example Geodesics
